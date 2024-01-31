@@ -1,0 +1,12 @@
+<h1>Deleting Book</h1>
+
+<%= render "form", book: @book %>
+
+<br>
+<p>Are you certain you want to delete this book?>
+
+<div>
+    <%= button_to "Destroy this book", @book, method: :delete %>
+</div>
+
+<%= link_to "Back to Home Page", books_path %>

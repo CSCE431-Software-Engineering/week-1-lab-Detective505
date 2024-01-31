@@ -6,15 +6,14 @@
   <% @books.each do |book| %>
     <%= render book %>
     <p>
-      <%= link_to "Show Details", book %>
-
-      <%= link_to "Update a book", edit_book_path(book) %>
-
+      <%= link_to "Show Details", book %> | <%= link_to "Update this book", edit_book_path(book) %> | <%= link_to "Delete this book", books_path(book) %>
     </p>
+
+    
   <% end %>
 </div>
-
+<br><p>
 <%= link_to "Add a book", new_book_path %>
 
-
+</p>
 
