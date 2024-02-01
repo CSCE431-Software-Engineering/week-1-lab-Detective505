@@ -1,0 +1,39 @@
+require 'test_helper'
+
+class BookTest < ActiveSupport::TestCase
+  test "should set and get title" do
+    book = Book.new(title: "Sample Title")
+    assert_equal "Sample Title", book.title
+  end
+
+  test "should set and get author" do
+    book = Book.new(author: "John Doe")
+    assert_equal "John Doe", book.author
+  end
+
+  test "should set and get published date" do
+    book = Book.new(published_date: "2022-01-01")
+    assert_equal "2022-01-01", book.published_date
+  end
+
+  test "should set and get price" do
+    book = Book.new(price: 29.99)
+    assert_equal 29.99, book.price
+  end
+
+  # New attribute tests
+  test "should set and get author for a book" do
+    book = Book.new(author: "Jane Smith")
+    assert_equal "Jane Smith", book.author
+  end
+
+  test "should set and get published date for a book" do
+    book = Book.new(published_date: "2022-02-15")
+    assert_equal "2022-02-15", book.published_date
+  end
+
+  test "should set and get price for a book" do
+    book = Book.new(price: 19.95)
+    assert_equal 19.95, book.price
+  end
+end

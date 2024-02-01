@@ -1,0 +1,6 @@
+   author: "John Doe", published_date: "2022-01-01", price: 29.99 
+   
+   # Additional assertions for the new attributes
+    assert_equal "John Doe", Book.last.author
+    assert_equal "2022-01-01", Book.last.published_date
+    assert_equal 29.99, Book.last.price
